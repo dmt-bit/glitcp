@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Gilt Consulting Partners</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#C8A951;
+  --gold-dim:#7A6430;
+  --gold-pale:rgba(200,169,81,0.08);
+  --ink:#0B0B09;
+  --ink2:#111110;
+  --ink3:#181815;
+  --off:#F4F1EB;
+  --muted:#6B6860;
+  --rule:rgba(200,169,81,0.15);
+  --ruleg:rgba(255,255,255,0.07);
+}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--off);font-family:'Inter',sans-serif;font-weight:300;line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.4rem 5vw;
+  background:rgba(11,11,9,0.9);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--ruleg);
+}
+.logo{
+  font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;
+  letter-spacing:0.06em;text-transform:uppercase;color:var(--off);
+  text-decoration:none;display:flex;align-items:center;gap:0.5rem;
+}
+.logo-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0}
+.nav-right{display:flex;align-items:center;gap:2.5rem}
+.nav-link{
+  font-family:'Syne',sans-serif;font-weight:400;font-size:0.72rem;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;transition:color 0.2s;
+}
+.nav-link:hover,.nav-link.active{color:var(--gold)}
+.nav-btn{
+  font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;
+  letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--ink);background:var(--gold);
+  padding:0.6rem 1.4rem;text-decoration:none;transition:opacity 0.2s;
+}
+.nav-btn:hover{opacity:0.85}
+
+/* PAGE HEADER */
+.page-header{
+  padding:10rem 5vw 5rem;
+  border-bottom:1px solid var(--ruleg);
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4rem;align-items:end;
+}
+.eyebrow{
+  font-family:'Syne',sans-serif;font-weight:400;font-size:0.62rem;
+  letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);
+  margin-bottom:1.5rem;display:flex;align-items:center;gap:0.8rem;
+}
+.eyebrow::before{content:'';width:1.5rem;height:1px;background:var(--gold)}
+.page-h1{
+  font-family:'Syne',sans-serif;font-weight:800;
+  font-size:clamp(2.8rem,5vw,5rem);
+  line-height:1.0;letter-spacing:-0.01em;
+  color:var(--off);text-transform:uppercase;
+}
+.page-h1 .accent{color:var(--gold)}
+.page-intro{font-size:1rem;color:var(--muted);line-height:1.8;max-width:44ch;align-self:end}
+
+/* FREE AUDIT BANNER */
+.audit-banner{
+  background:var(--gold-pale);
+  border-bottom:1px solid var(--rule);
+  padding:3.5rem 5vw;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4rem;align-items:center;
+}
+.audit-left{}
+.audit-badge{
+  font-family:'Syne',sans-serif;font-weight:800;font-size:0.58rem;
+  letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--ink);background:var(--gold);
+  display:inline-block;padding:0.3rem 0.8rem;margin-bottom:1.25rem;
+}
+.audit-h{
+  font-family:'Syne',sans-serif;font-weight:800;
+  font-size:clamp(1.6rem,3vw,2.4rem);
+  text-transform:uppercase;letter-spacing:-0.01em;
+  color:var(--off);line-height:1.05;margin-bottom:0.75rem;
+}
+.audit-h .accent{color:var(--gold)}
+.audit-p{font-size:0.92rem;color:var(--muted);line-height:1.8;max-width:44ch}
+.audit-right{display:flex;flex-direction:column;gap:0}
+.audit-step{
+  padding:1.25rem 0;
+  border-top:1px solid var(--ruleg);
+  display:grid;grid-template-columns:2rem 1fr;
+  gap:1rem;align-items:start;
+}
+.audit-step:last-child{border-bottom:1px solid var(--ruleg)}
+.audit-step-n{
+  font-family:'Syne',sans-serif;font-weight:800;font-size:0.75rem;
+  color:var(--gold);letter-spacing:0.1em;padding-top:0.1rem;
+}
+.audit-step-text{font-size:0.85rem;color:var(--off);line-height:1.65}
+.audit-step-text strong{
+  font-family:'Syne',sans-serif;font-weight:700;font-size:0.7rem;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--off);display:block;margin-bottom:0.25rem;
+}
+
+/* HOW IT WORKS */
+.how{
+  padding:6rem 5vw;background:var(--ink2);
+  border-bottom:1px solid var(--ruleg);
+}
+.section-label{
+  font-family:'Syne',sans-serif;font-weight:700;font-size:0.58rem;
+  letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:3rem;
+  display:flex;align-items:center;gap:1rem;
+}
+.section-label::after{content:'';flex:1;height:1px;background:var(--ruleg)}
+.how-steps{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border:1px solid var(--ruleg);
+}
+.how-step{
+  padding:2.5rem 2rem;border-right:1px solid var(--ruleg);
+}
+.how-step:last-child{border-right:none}
+.step-bar{width:2rem;height:2px;background:var(--gold);margin-bottom:1.5rem}
+.step-n{
+  font-family:'Syne',sans-serif;font-weight:800;font-size:0.58rem;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold-dim);margin-bottom:0.5rem;
+}
+.step-title{
+  font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;
+  color:var(--off);margin-bottom:0.6rem;line-height:1.2;
+}
+.step-body{font-size:0.83rem;color:var(--muted);line-height:1.75}
+
+/* TIERS */
+.tiers{padding:6rem 5vw;background:var(--ink)}
+.tiers-intro{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4rem;align-items:end;margin-bottom:4rem;
+}
+.tiers-h{
+  font-family:'Syne',sans-serif;font-weight:800;
+  font-size:clamp(2rem,3.5vw,3rem);
+  text-transform:uppercase;letter-spacing:-0.01em;
+  color:var(--off);line-height:1.05;
+}
+.tiers-h .accent{color:var(--gold)}
+.tiers-p{font-size:0.92rem;color:var(--muted);line-height:1.8;max-width:42ch}
+
+.tier-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:0;border:1px solid var(--ruleg);
+}
+.tier{
+  padding:3rem 2.5rem;border-right:1px solid var(--ruleg);
+  display:flex;flex-direction:column;
+  transition:background 0.25s;position:relative;
+}
+.tier:last-child{border-right:none}
+.tier:hover{background:var(--ink2)}
+.tier.featured{
+  background:var(--ink3);
+  border:2px solid var(--gold);
+  margin:-1px;
+  z-index:1;
+}
+.tier-badge{
+  font-family:'Syne',sans-serif;font-weight:800;font-size:0.5rem;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--ink);background:var(--gold);
+  display:inline-block;padding:0.25rem 0.6rem;
+  margin-bottom:1.5rem;align-self:flex-start;
+}
+.tier-name{
+  font-family:'Syne',sans-serif;font-weight:800;
+  font-size:1.4rem;text-transform:uppercase;
+  letter-spacing:0.02em;color:var(--off);
+  margin-bottom:0.4rem;
+}
+.tier-size{
+  font-family:'Syne',sans-serif;font-weight:400;font-size:0.6rem;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.5rem;
+}
+/* Quick Win tester */
+.quickwin{
+  padding:5rem 5vw;background:var(--ink3);
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+}
+.quickwin-inner{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:5rem;align-items:center;
+  border:1px solid var(--rule);
+}
+.quickwin-left{
+  padding:3rem;
+  border-right:1px solid var(--rule);
+}
+.quickwin-badge{
+  font-family:'Syne',sans-serif;font-weight:800;font-size:0.52rem;
+  letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--ink);background:var(--gold);
+  display:inline-block;padding:0.25rem 0.7rem;margin-bottom:1.25rem;
+}
+.quickwin-h{
+  font-family:'Syne',sans-serif;font-weight:800;
+  font-size:clamp(1.6rem,2.8vw,2.4rem);
+  text-transform:uppercase;letter-spacing:-0.01em;
+  color:var(--off);line-height:1.05;margin-bottom:0.85rem;
+}
+.quickwin-h .accent{color:var(--gold)}
+.quickwin-p{font-size:0.9rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem}
+.quickwin-credit{
+  font-family:'Syne',sans-serif;font-weight:700;font-size:0.6rem;
+  letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--gold);border-left:2px solid var(--gold);
+  padding:0.6rem 0.8rem;margin-bottom:1.75rem;
+  background:rgba(200,169,81,0.05);
+}
+.quickwin-right{
+  padding:3rem;
+  display:flex;flex-direction:column;gap:0;
+}
+.quickwin-row{
+  padding:1.25rem 0;
+  border-top:1px solid var(--ruleg);
+  display:grid;grid-template-columns:1.5rem 1fr;gap:0.75rem;
+}
+.quickwin-row:last-child{border-bottom:1px solid var(--ruleg)}
+.quickwin-row-dot{
+  width:6px;height:6px;background:var(--gold);
+  border-radius:50%;margin-top:0.45rem;
+}
+.quickwin-row-text{font-size:0.85rem;color:var(--off);line-height:1.65}
+.tier-divider{
+  height:1px;background:var(--ruleg);
+  margin:1.75rem 0;
+}
+.tier-desc{
+  font-size:0.85rem;color:var(--muted);line-height:1.75;
+  margin-bottom:1.75rem;flex:1;
+}
+.tier-includes{
+  list-style:none;display:flex;flex-direction:column;gap:0.65rem;
+  margin-bottom:2rem;
+}
+.tier-includes li{
+  font-size:0.83rem;color:var(--off);line-height:1.5;
+  display:flex;align-items:flex-start;gap:0.6rem;
+}
+.tier-includes li::before{
+  content:'—';color:var(--gold);font-family:'Syne',sans-serif;
+  font-weight:700;flex-shrink:0;font-size:0.75rem;margin-top:0.1rem;
+}
+.tier-cta{
+  font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;
+  letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--ink);background:var(--gold);
+  padding:0.85rem 1.5rem;text-decoration:none;
+  text-align:center;transition:opacity 0.2s;margin-top:auto;
+}
+.tier-cta:hover{opacity:0.85}
+.tier-cta.ghost{
+  color:var(--gold);background:transparent;
+  border:1px solid var(--gold-dim);
+}
+.tier-cta.ghost:hover{background:var(--gold-pale)}
+
+/* WHAT'S ALWAYS INCLUDED */
+.always{
+  padding:5rem 5vw;background:var(--ink2);
+  border-top:1px solid var(--ruleg);border-bottom:1px solid var(--ruleg);
+}
+.always-inner{
+  display:grid;grid-template-columns:1fr 2fr;
+  gap:5rem;align-items:center;
+}
+.always-h{
+  font-family:'Syne',sans-serif;font-weight:800;
+  font-size:clamp(1.5rem,2.5vw,2.2rem);
+  text-transform:uppercase;letter-spacing:-0.01em;
+  color:var(--off);line-height:1.1;
+}
+.always-h .accent{color:var(--gold)}
+.always-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  border:1px solid var(--ruleg);
+}
+.always-item{
+  padding:1.5rem 1.75rem;border-right:1px solid var(--ruleg);
+  border-bottom:1px solid var(--ruleg);
+}
+.always-item:nth-child(2n){border-right:none}
+.always-item:nth-last-child(-n+2){border-bottom:none}
+.always-item-title{
+  font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--off);margin-bottom:0.4rem;
+}
+.always-item-body{font-size:0.82rem;color:var(--muted);line-height:1.65}
+
+/* FAQ */
+.faq{padding:6rem 5vw;background:var(--ink)}
+.faq-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:0;border:1px solid var(--ruleg);
+  margin-top:3rem;
+}
+.faq-item{
+  padding:2rem 2.5rem;border-right:1px solid var(--ruleg);
+  border-bottom:1px solid var(--ruleg);
+}
+.faq-item:nth-child(2n){border-right:none}
+.faq-item:nth-last-child(-n+2){border-bottom:none}
+.faq-q{
+  font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;
+  color:var(--off);margin-bottom:0.6rem;line-height:1.35;
+}
+.faq-a{font-size:0.83rem;color:var(--muted);line-height:1.75}
+
+/* CTA STRIP */
+.cta-strip{
+  padding:5rem 5vw;background:var(--ink3);
+  display:flex;align-items:center;justify-content:space-between;
+  gap:2rem;flex-wrap:wrap;
+  border-top:1px solid var(--ruleg);
+}
+.cta-strip-h{
+  font-family:'Syne',sans-serif;font-weight:800;
+  font-size:clamp(1.5rem,3vw,2.5rem);
+  text-transform:uppercase;letter-spacing:-0.01em;
+  color:var(--off);line-height:1.05;
+}
+.cta-strip-h .accent{color:var(--gold)}
+.cta-actions{display:flex;align-items:center;gap:2rem;flex-shrink:0}
+.btn-primary{
+  font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;
+  letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--ink);background:var(--gold);
+  padding:0.9rem 2rem;text-decoration:none;transition:opacity 0.2s;
+}
+.btn-primary:hover{opacity:0.85}
+.btn-text{
+  font-family:'Syne',sans-serif;font-weight:400;font-size:0.65rem;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;transition:color 0.2s;
+}
+.btn-text:hover{color:var(--gold)}
+
+/* FOOTER */
+footer{
+  padding:2rem 5vw;background:var(--ink);
+  border-top:1px solid var(--ruleg);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+}
+.footer-logo{
+  font-family:'Syne',sans-serif;font-weight:800;font-size:0.85rem;
+  letter-spacing:0.06em;text-transform:uppercase;color:var(--off);
+  display:flex;align-items:center;gap:0.4rem;text-decoration:none;
+}
+.footer-dot{width:5px;height:5px;background:var(--gold);border-radius:50%}
+.footer-copy{
+  font-family:'Syne',sans-serif;font-weight:400;font-size:0.58rem;
+  letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dim);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:1.2rem 5vw}
+  .nav-link{display:none}
+  .page-header{grid-template-columns:1fr;gap:2rem;padding:8rem 5vw 3rem}
+  .audit-banner{grid-template-columns:1fr;gap:2.5rem}
+  .how-steps{grid-template-columns:1fr 1fr}
+  .how-step:nth-child(2n){border-right:none}
+  .how-step{border-bottom:1px solid var(--ruleg)}
+  .how-step:nth-last-child(-n+2){border-bottom:none}
+  .quickwin-inner{grid-template-columns:1fr}
+  .quickwin-left{border-right:none;border-bottom:1px solid var(--rule);padding:2rem}
+  .quickwin-right{padding:2rem}
+  .tiers-intro{grid-template-columns:1fr;gap:1.5rem}
+  .tier-grid{grid-template-columns:1fr}
+  .tier{border-right:none;border-bottom:1px solid var(--ruleg)}
+  .tier.featured{margin:0;border-width:1px}
+  .tier:last-child{border-bottom:none}
+  .always-inner{grid-template-columns:1fr;gap:2.5rem}
+  .always-grid{grid-template-columns:1fr}
+  .always-item{border-right:none}
+  .always-item:nth-last-child(-n+2){border-bottom:1px solid var(--ruleg)}
+  .always-item:last-child{border-bottom:none}
+  .faq-grid{grid-template-columns:1fr}
+  .faq-item{border-right:none}
+  .faq-item:nth-last-child(-n+2){border-bottom:1px solid var(--ruleg)}
+  .faq-item:last-child{border-bottom:none}
+  .cta-strip{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="/"><span class="logo-dot"></span>Gilt Consulting Partners</a>
+  <div class="nav-right">
+    <a class="nav-link active" href="/services">Services</a>
+    <a class="nav-link" href="/work">Work</a>
+    <a class="nav-link" href="/">Home</a>
+    <a class="nav-btn" href="intake.html">Let's Talk</a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div>
+    <p class="eyebrow">Services & Pricing</p>
+    <h1 class="page-h1">Know what<br>you're<br><span class="accent">getting into.</span></h1>
+  </div>
+  <p class="page-intro">No mystery pricing. No bait-and-switch. Every engagement starts with a free audit — so we both know exactly what needs to be built before any money changes hands.</p>
+</header>
+
+<!-- FREE AUDIT BANNER -->
+<div class="audit-banner">
+  <div class="audit-left">
+    <span class="audit-badge">Always Free</span>
+    <h2 class="audit-h">Start with a<br><span class="accent">systems audit.</span></h2>
+    <p class="audit-p">Before we talk pricing, we talk reality. Every engagement begins with a complimentary systems and compliance audit — we assess where you are, identify the gaps, and come back with a clear picture of what needs to be built. No obligation. No pressure.</p>
+  </div>
+  <div class="audit-right">
+    <div class="audit-step">
+      <span class="audit-step-n">01</span>
+      <div class="audit-step-text">
+        <strong>You book the audit</strong>
+        Fill out a short intake form so we understand your business, your stage, and what's keeping you up at night operationally.
+      </div>
+    </div>
+    <div class="audit-step">
+      <span class="audit-step-n">02</span>
+      <div class="audit-step-text">
+        <strong>We assess your systems</strong>
+        We review your current operations, compliance posture, and process infrastructure — identifying gaps, risks, and opportunities.
+      </div>
+    </div>
+    <div class="audit-step">
+      <span class="audit-step-n">03</span>
+      <div class="audit-step-text">
+        <strong>We report back with findings</strong>
+        You receive a clear audit report. We walk through it together — and if there's a fit, we discuss which engagement tier makes sense for where you are.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW ENGAGEMENTS WORK -->
+<section class="how">
+  <p class="section-label">How Engagements Work</p>
+  <div class="how-steps">
+    <div class="how-step">
+      <div class="step-bar"></div>
+      <p class="step-n">Step 01</p>
+      <h3 class="step-title">Free Audit</h3>
+      <p class="step-body">We assess your operations, compliance gaps, and process infrastructure. You get a full findings report. No cost, no commitment.</p>
+    </div>
+    <div class="how-step">
+      <div class="step-bar"></div>
+      <p class="step-n">Step 02</p>
+      <h3 class="step-title">Findings Call</h3>
+      <p class="step-body">We walk through the audit together. You ask questions. We recommend the right tier based on scope, not upsell.</p>
+    </div>
+    <div class="how-step">
+      <div class="step-bar"></div>
+      <p class="step-n">Step 03</p>
+      <h3 class="step-title">Engagement Begins</h3>
+      <p class="step-body">Scoped, signed, started. We embed into your operations and build what needs to be built — on your timeline.</p>
+    </div>
+    <div class="how-step">
+      <div class="step-bar"></div>
+      <p class="step-n">Step 04</p>
+      <h3 class="step-title">Handoff & Independence</h3>
+      <p class="step-body">You leave with documented systems, trained teams, and infrastructure that runs without us. That's always the goal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK WIN TESTER -->
+<section class="quickwin">
+  <div class="quickwin-inner">
+    <div class="quickwin-left">
+      <span class="quickwin-badge">Not ready for a full engagement?</span>
+      <h2 class="quickwin-h">Start with one<br><span class="accent">Quick Win.</span></h2>
+      <p class="quickwin-p">After your free audit, we identify your single biggest operational bottleneck. The Quick Win engagement maps that workflow end-to-end and delivers a clear fix — fast. It's a low-risk way to see exactly how we work before committing to a full tier.</p>
+      <p class="quickwin-credit">100% of the Quick Win fee is credited toward any full engagement tier.</p>
+      <a class="tier-cta" href="intake.html" style="display:inline-block;text-align:center;">Book the Free Audit First</a>
+    </div>
+    <div class="quickwin-right">
+      <div class="quickwin-row">
+        <div class="quickwin-row-dot"></div>
+        <p class="quickwin-row-text"><strong style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:0.2rem;color:var(--off)">One Bottleneck, Fully Mapped</strong>We take the single most pressing finding from your audit and map the workflow from start to finish — every step, every handoff, every gap.</p>
+      </div>
+      <div class="quickwin-row">
+        <div class="quickwin-row-dot"></div>
+        <p class="quickwin-row-text"><strong style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:0.2rem;color:var(--off)">A Clear Fix, Not a Report</strong>You receive an actionable workflow redesign — not a document full of recommendations. Something you can implement immediately, with or without us.</p>
+      </div>
+      <div class="quickwin-row">
+        <div class="quickwin-row-dot"></div>
+        <p class="quickwin-row-text"><strong style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:0.2rem;color:var(--off)">A Walkthrough Session</strong>We present the workflow map together, walk through the fix, and answer questions. You leave the call with total clarity on what to do next.</p>
+      </div>
+      <div class="quickwin-row">
+        <div class="quickwin-row-dot"></div>
+        <p class="quickwin-row-text"><strong style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:0.2rem;color:var(--off)">Credit Applied if You Continue</strong>If you move into a full engagement tier, every dollar of the Quick Win fee comes off your first invoice. No penalty for starting small.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIERS -->
+<section class="tiers">
+  <div class="tiers-intro">
+    <h2 class="tiers-h">Three tiers.<br><span class="accent">One standard.</span></h2>
+    <p class="tiers-p">Scoped by team size and operational complexity. Every tier requires the free audit first — so the recommendation you get is based on what we actually found, not a guess.</p>
+  </div>
+  <div class="tier-grid">
+
+    <!-- TIER 1 -->
+    <div class="tier">
+      <p class="tier-name">Foundations</p>
+      <p class="tier-size">Solopreneurs · 1–5 people</p>
+      <div class="tier-divider"></div>
+      <p class="tier-desc">For early-stage founders who need a solid operational base before they start scaling. We build the core systems so growth doesn't break what you've built.</p>
+      <ul class="tier-includes">
+        <li>Full systems & compliance audit</li>
+        <li>Core SOP documentation (up to 5 processes)</li>
+        <li>Compliance gap report with recommendations</li>
+        <li>One-time process design session</li>
+        <li>30-day async support post-delivery</li>
+      </ul>
+      <a class="tier-cta ghost" href="intake.html">Start with a Free Audit</a>
+    </div>
+
+    <!-- TIER 2 — FEATURED -->
+    <div class="tier featured">
+      <span class="tier-badge">Most Popular</span>
+      <p class="tier-name">Infrastructure</p>
+      <p class="tier-size">Small teams · 6–20 people</p>
+      <div class="tier-divider"></div>
+      <p class="tier-desc">For brands actively operating and hitting walls. We build the full operational backbone — SOPs, compliance systems, workflow design — and stay on as your fractional ops lead.</p>
+      <ul class="tier-includes">
+        <li>Everything in Foundations</li>
+        <li>Full SOP architecture (unlimited processes)</li>
+        <li>Monthly operational advisory retainer</li>
+        <li>Compliance system design & implementation</li>
+        <li>Vendor & manufacturer process integration</li>
+        <li>Bi-weekly check-ins + async support</li>
+      </ul>
+      <a class="tier-cta" href="intake.html">Start with a Free Audit</a>
+    </div>
+
+    <!-- TIER 3 -->
+    <div class="tier">
+      <p class="tier-name">Transformation</p>
+      <p class="tier-size">Scaling brands · 21–50 people</p>
+      <div class="tier-divider"></div>
+      <p class="tier-desc">For brands with complex operational needs — capital projects, facility buildouts, manufacturer transitions, or a full operational overhaul before a growth event.</p>
+      <ul class="tier-includes">
+        <li>Everything in Infrastructure</li>
+        <li>Capital project planning & management</li>
+        <li>Facility expansion or equipment buildout oversight</li>
+        <li>Regulatory & audit preparation</li>
+        <li>Contract manufacturer onboarding</li>
+        <li>Full operational transformation roadmap</li>
+        <li>Dedicated project lead throughout</li>
+      </ul>
+      <a class="tier-cta ghost" href="intake.html">Start with a Free Audit</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ALWAYS INCLUDED -->
+<section class="always">
+  <div class="always-inner">
+    <h2 class="always-h">Always<br><span class="accent">included.</span><br>Every tier.</h2>
+    <div class="always-grid">
+      <div class="always-item">
+        <p class="always-item-title">Direct Access</p>
+        <p class="always-item-body">You work with the principal — not a junior analyst or account manager. Every engagement is personally led.</p>
+      </div>
+      <div class="always-item">
+        <p class="always-item-title">Free Audit First</p>
+        <p class="always-item-body">No engagement starts without the audit. We never scope work we haven't assessed — it protects you and us.</p>
+      </div>
+      <div class="always-item">
+        <p class="always-item-title">Documented Deliverables</p>
+        <p class="always-item-body">Everything we build is documented and handed off in a format your team can actually use — not locked in our heads.</p>
+      </div>
+      <div class="always-item">
+        <p class="always-item-title">No Dependency by Design</p>
+        <p class="always-item-body">The goal is always your independence. We build systems that run without us. We're not interested in being a crutch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <p class="section-label">Common Questions</p>
+  <div class="faq-grid">
+    <div class="faq-item">
+      <p class="faq-q">Do I really have to start with the free audit?</p>
+      <p class="faq-a">Yes — and it's for your benefit as much as ours. We won't scope or price work without understanding your actual operations first. The audit prevents misalignment on both sides.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What if my needs don't fit neatly into a tier?</p>
+      <p class="faq-a">That's what the findings call is for. The tiers are starting points — scope is always refined based on what the audit reveals. We don't force you into a box.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How long does a typical engagement last?</p>
+      <p class="faq-a">Foundations engagements are typically 4–8 weeks. Infrastructure retainers run 3–6 months. Transformation engagements are scoped per project and can range from 2–12 months.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">We're a solopreneur — is this really for us?</p>
+      <p class="faq-a">Yes. The earlier you build operational infrastructure, the cheaper it is. Building systems at 1 person is far easier than rebuilding broken ones at 20. The Foundations tier exists exactly for this.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Do you work with brands outside of manufacturing?</p>
+      <p class="faq-a">Absolutely. While our background is in regulated manufacturing, operational infrastructure applies to any industry. If you have processes, we can improve them.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What happens after an engagement ends?</p>
+      <p class="faq-a">You're handed documented systems, trained staff, and a clear operational roadmap. Past clients can re-engage for specific projects or advisory as their needs evolve.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <h2 class="cta-strip-h">Start with the<br><span class="accent">free audit.</span></h2>
+  <div class="cta-actions">
+    <a class="btn-primary" href="intake.html">Book Your Free Audit</a>
+    <a class="btn-text" href="https://calendly.com/daily-giltcp">Or book a discovery call →</a>
+  </div>
+</div>
+
+<footer>
+  <a class="footer-logo" href="/"><span class="footer-dot"></span>Gilt Consulting Partners</a>
+  <p class="footer-copy">giltcp.com &nbsp;·&nbsp; Operational Infrastructure for Indie Brands &nbsp;·&nbsp; <a href="https://www.linkedin.com/company/gilt-consulting-partners/" target="_blank" style="color:var(--gold);text-decoration:none">LinkedIn</a></p>
+</footer>
+
+</body>
+</html>
