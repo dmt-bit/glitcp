@@ -1,0 +1,343 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Resource Guide | Gilt Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--sand:#F5EFE4;--white:#FDFCFA;--gold:#B89A5A;--gold-light:#F0E8D5;--sage:#7D9B76;--sage-mid:#C8D8C5;--sage-light:#EEF3ED;--charcoal:#2C2C2C;--charcoal-soft:#4A4A4A;--rule:#E0D9CE}
+*{box-sizing:border-box}body{margin:0;background:var(--white);color:var(--charcoal);font-family:'Inter',sans-serif;font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--sage);text-decoration:none;border-bottom:1px solid var(--sage-mid)}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400;color:var(--charcoal);line-height:1.25}
+.wrap{display:flex;max-width:1240px;margin:0 auto}
+nav{position:sticky;top:0;align-self:flex-start;height:100vh;overflow-y:auto;width:266px;flex:0 0 266px;padding:38px 26px;border-right:1px solid var(--rule);background:var(--sand)}
+nav .mark{font-family:'Playfair Display',serif;font-size:21px;letter-spacing:.01em;margin-bottom:2px}
+nav .mark small{display:block;font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--charcoal-soft);margin-top:4px}
+nav ol{list-style:none;padding:0;margin:26px 0 0;counter-reset:s}
+nav ol li{counter-increment:s;margin:0 0 3px}
+nav ol li a{display:block;font-size:13.5px;padding:6px 8px 6px 26px;border:0;color:var(--charcoal-soft);border-radius:4px;position:relative}
+nav ol li a:before{content:counter(s,decimal-leading-zero);position:absolute;left:6px;font-size:10px;color:var(--gold);top:9px;letter-spacing:.04em}
+nav ol li a:hover,nav ol li a.on{background:var(--white);color:var(--charcoal)}
+main{flex:1;min-width:0;padding:0 62px 100px}
+header.hero{padding:76px 0 44px;border-bottom:1px solid var(--rule)}
+.eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+header.hero h1{font-size:52px;margin:0 0 18px}
+header.hero p.lede{font-size:19px;color:var(--charcoal-soft);max-width:60ch;margin:0}
+.draftbar{margin:26px 0 0;background:var(--gold-light);border-left:3px solid var(--gold);padding:14px 18px;font-size:13.5px;color:var(--charcoal-soft)}
+section{padding:52px 0;border-bottom:1px solid var(--rule);scroll-margin-top:20px}
+section>h2{font-size:32px;margin:0 0 6px}
+section>p.sub{color:var(--charcoal-soft);margin:0 0 26px;max-width:66ch}
+h3{font-size:20px;margin:32px 0 10px}
+h4{font-size:15px;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.02em;margin:22px 0 6px}
+p{max-width:70ch}
+ul,ol{max-width:70ch;padding-left:20px}li{margin:6px 0}
+.check{list-style:none;padding:0}
+.check li{position:relative;padding-left:30px;margin:9px 0}
+.check li:before{content:"";position:absolute;left:0;top:8px;width:13px;height:13px;border:1px solid var(--sage);border-radius:3px;background:var(--sage-light)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:16px;margin:22px 0}
+.card{background:var(--sand);border:1px solid var(--rule);border-radius:8px;padding:20px 22px}
+.card h4{margin:0 0 6px}.card p{font-size:14px;margin:0;color:var(--charcoal-soft)}
+table{border-collapse:collapse;width:100%;margin:22px 0;font-size:14.5px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{background:var(--sage-light);font-weight:600;font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--charcoal-soft)}
+.note{background:var(--sage-light);border-left:3px solid var(--sage);padding:16px 20px;margin:24px 0;font-size:14.5px;border-radius:0 6px 6px 0}
+.note strong{font-weight:600}
+.quote{font-family:'Playfair Display',serif;font-style:italic;font-size:21px;color:var(--charcoal-soft);border-left:2px solid var(--gold);padding-left:22px;margin:30px 0;max-width:62ch}
+details{border-bottom:1px solid var(--rule);padding:15px 0}
+details summary{cursor:pointer;font-weight:500;font-size:15.5px;list-style:none;display:flex;gap:14px;align-items:flex-start}
+details summary::-webkit-details-marker{display:none}
+details summary:before{content:"+";color:var(--gold);font-size:17px;line-height:1.4}
+details[open] summary:before{content:"\2013"}
+details .a{padding:10px 0 2px 28px;color:var(--charcoal-soft);font-size:15px}
+details .a p{margin:0 0 10px}
+.faqgroup{margin:34px 0 0}
+.faqgroup>h3{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin:0 0 4px}
+.cta{background:var(--charcoal);color:var(--sand);border-radius:10px;padding:44px 46px;margin:52px 0 0}
+.cta h2{color:var(--white);font-size:30px;margin:0 0 12px}
+.cta p{color:#CFC7B8;margin:0 0 22px;max-width:56ch}
+.cta a.btn{display:inline-block;background:var(--gold);color:#231d10;border:0;padding:13px 28px;border-radius:5px;font-weight:600;font-size:14px;letter-spacing:.03em}
+footer{padding:30px 0 0;font-size:12.5px;color:var(--charcoal-soft)}
+.disc{font-size:13px;color:var(--charcoal-soft);background:var(--sand);border:1px solid var(--rule);padding:18px 22px;border-radius:6px;margin:26px 0 0}
+@media(max-width:900px){nav{display:none}main{padding:0 24px 70px}header.hero h1{font-size:38px}}
+</style></head><body><div class="wrap">
+<nav>
+<div class="mark">Gilt<small>Consulting</small></div>
+<ol>
+<li><a href="#start">Start Here</a></li>
+<li><a href="#discharge">The First 72 Hours</a></li>
+<li><a href="#ask">Questions Before Discharge</a></li>
+<li><a href="#home">Making the Home Work</a></li>
+<li><a href="#equipment">Equipment, Decoded</a></li>
+<li><a href="#team">Who's Who on the Care Team</a></li>
+<li><a href="#paying">How Care Gets Paid For</a></li>
+<li><a href="#documents">The Document Binder</a></li>
+<li><a href="#family">Running the Family Meeting</a></li>
+<li><a href="#caregiver">Caregiver Sustainability</a></li>
+<li><a href="#redflags">When to Escalate</a></li>
+<li><a href="#faq">Frequently Asked Questions</a></li>
+</ol>
+</nav>
+<main>
+<header class="hero">
+<div class="eyebrow">Family Resource Guide &middot; The OASIS Method&trade;</div>
+<h1>What to do when a loved one comes home.</h1>
+<p class="lede">A practical guide for families managing a medical transition at home &mdash; the logistics nobody hands you in a discharge folder. Free to use, whether or not you ever work with us.</p>
+</header>
+
+<section id="start">
+<h2>Start Here</h2>
+<p class="sub">If you are reading this at midnight the day before a discharge, read only Section 2. The rest will keep.</p>
+<p>Most families arrive at this moment the same way: a fall, a diagnosis, a decline that finally crossed a line. The medical system does its job and then hands the rest to you &mdash; the equipment, the schedule, the vendors, the sibling phone calls, the bathroom that suddenly isn't safe.</p>
+<p>That handoff is not a care problem. It is an <strong>operations problem</strong>, and it is solvable. This guide walks the same ground we walk with families, in the same order.</p>
+<div class="quote">Your family deserves more than a folder of discharge papers and a prayer.</div>
+<div class="grid">
+<div class="card"><h4>Do first</h4><p>Safety, bathroom access, and who is in the house overnight. Nothing else matters until these three are answered.</p></div>
+<div class="card"><h4>Do this week</h4><p>Turn medical instructions into a written daily routine. Order equipment. Name one point person.</p></div>
+<div class="card"><h4>Do this month</h4><p>Money, documents, vendor coverage, and a plan for the caregiver who is absorbing all of it.</p></div>
+</div>
+<div class="note"><strong>How to use this guide.</strong> Print it. Write on it. Bring it to your next appointment. If any section makes your stomach drop, that is usually the section to start with &mdash; and a reasonable thing to bring to a free 30-minute call.</div>
+</section>
+
+<section id="discharge">
+<h2>The First 72 Hours</h2>
+<p class="sub">The window where most households either find their footing or start improvising. Work top to bottom.</p>
+<h3>Before they leave the hospital</h3>
+<ul class="check">
+<li>Get the discharge summary <em>in writing</em>, including the medication list and every follow-up appointment.</li>
+<li>Ask the case manager directly: what level of help does this person need, and for how many hours a day?</li>
+<li>Confirm what is ordered &mdash; home health, physical therapy, equipment &mdash; and who is delivering it, when.</li>
+<li>Ask what the transfer looks like: can they bear weight, use stairs, get to a toilet unassisted?</li>
+<li>Ask what would send them back to the hospital, and what number to call before that happens.</li>
+</ul>
+<h3>The 24 hours before they arrive</h3>
+<ul class="check">
+<li>Clear one path: bed to bathroom. No rugs, no cords, no side tables, lit at night.</li>
+<li>Decide where they will sleep. If stairs are out, the living room becomes the bedroom &mdash; do it now, not at 11 PM.</li>
+<li>Confirm equipment is <em>in the house and assembled</em>, not on a truck.</li>
+<li>Stock three days of easy food and any supplies (briefs, wipes, gloves, chux pads) you would rather not run out for.</li>
+<li>Build the medication schedule on paper, by time of day, not by prescription bottle.</li>
+</ul>
+<h3>The first night</h3>
+<ul class="check">
+<li>Name who is on duty overnight. Write it down. Rotating "whoever wakes up" is how burnout begins.</li>
+<li>Put a phone, water, light, and a way to call for help within arm's reach of the bed.</li>
+<li>Do a dry run of the walk to the bathroom while everyone is awake.</li>
+<li>Write down what actually went wrong. Day two is when you fix it.</li>
+</ul>
+<div class="note"><strong>The 22-hour problem.</strong> A home health aide may come for two hours a day. The other twenty-two belong to the family. Plan for the twenty-two, not the two.</div>
+</section>
+
+<section id="ask">
+<h2>Questions to Ask Before Discharge</h2>
+<p class="sub">Copy these into your phone. Ask them out loud, and write the answers down.</p>
+<table>
+<tr><th>Ask</th><th>Why it matters</th></tr>
+<tr><td>"What exactly can they do without help &mdash; walking, stairs, toileting, dressing, bathing?"</td><td>This is the real definition of how many hours of coverage you need.</td></tr>
+<tr><td>"What has been ordered, and who is responsible for delivering it?"</td><td>Ordered is not the same as scheduled. Get names and phone numbers.</td></tr>
+<tr><td>"Is home health approved, for how many visits, and for how long?"</td><td>Home health is usually intermittent and time-limited. Know the end date on day one. <em>[verify]</em></td></tr>
+<tr><td>"What is covered, and what will we be paying for ourselves?"</td><td>Prevents the invoice that arrives three weeks later.</td></tr>
+<tr><td>"What does recovery realistically look like at 2 weeks, 6 weeks, 3 months?"</td><td>Tells you whether you are planning a season or a new normal.</td></tr>
+<tr><td>"Who do we call at 9 PM on a Saturday?"</td><td>The answer should not be "the emergency room."</td></tr>
+<tr><td>"Can we get this in writing?"</td><td>Always. Memory fails in hospital hallways.</td></tr>
+</table>
+</section>
+
+<section id="home">
+<h2>Making the Home Work</h2>
+<p class="sub">Most home injuries after a discharge are not medical events. They are furniture, footwear, and lighting.</p>
+<h3>Room by room</h3>
+<table>
+<tr><th>Zone</th><th>What to change</th></tr>
+<tr><td>Bathroom</td><td>Grab bars anchored into studs (never suction cups). Raised toilet seat or commode. Shower chair and handheld sprayer. Non-slip mat inside and outside the tub.</td></tr>
+<tr><td>Bedroom</td><td>Bed height so feet reach the floor with knees at 90&deg;. Clear path to the door. Lamp reachable from the bed. Nothing stored on the floor.</td></tr>
+<tr><td>Hallways &amp; stairs</td><td>Remove throw rugs entirely. Tape or remove cords. Motion-sensor night lights. Handrail on both sides if stairs are unavoidable.</td></tr>
+<tr><td>Kitchen</td><td>Move daily items to waist height. Nothing that requires a step stool. A seat within reach of the counter.</td></tr>
+<tr><td>Living area</td><td>One firm chair with arms at the right height &mdash; deep sofas trap people. Clear walker turning space.</td></tr>
+<tr><td>Entry</td><td>Threshold ramp if needed. Working exterior light. A safe, known route for EMS to reach them.</td></tr>
+</table>
+<h3>The five cheapest changes that matter most</h3>
+<ol>
+<li>Throw rugs gone. All of them. Today.</li>
+<li>Night lighting from bed to toilet.</li>
+<li>Non-slip footwear with a back &mdash; no socks, no backless slippers.</li>
+<li>A grab bar where they actually reach for the towel rack.</li>
+<li>A working phone or call button within arm's reach at all times.</li>
+</ol>
+</section>
+<section id="equipment">
+<h2>Equipment, Decoded</h2>
+<p class="sub">What things actually do, and the mistake families make with each.</p>
+<table>
+<tr><th>Item</th><th>What it's for</th><th>Common mistake</th></tr>
+<tr><td>Rolling walker</td><td>Stability while walking and turning</td><td>Wrong height, or used to pull up from a chair (it rolls)</td></tr>
+<tr><td>Transfer belt</td><td>Safely helping someone stand or pivot</td><td>Families lift under the arms instead &mdash; injures both people</td></tr>
+<tr><td>Bedside commode</td><td>Night toileting without the walk</td><td>Bought late, after the first fall</td></tr>
+<tr><td>Shower chair + handheld</td><td>Bathing without standing</td><td>Buying a stool with no back or arms</td></tr>
+<tr><td>Hospital bed</td><td>Positioning, transfers, pressure relief</td><td>Placed where no one can reach both sides</td></tr>
+<tr><td>Grab bars</td><td>Fixed anchor points at high-risk moments</td><td>Suction-cup models on tile &mdash; they fail under load</td></tr>
+<tr><td>Wedge / pressure cushion</td><td>Preventing skin breakdown when sitting or lying for long stretches</td><td>Skipped entirely until a sore appears</td></tr>
+<tr><td>Lift or slide sheet</td><td>Repositioning in bed without straining</td><td>Dragging on sheets instead &mdash; tears skin</td></tr>
+</table>
+<div class="note"><strong>Buy, rent, or borrow?</strong> Rent what is tied to a recovery window (hospital bed, wheelchair). Buy what will be used for a year or more (grab bars, shower chair). Check local medical equipment loan closets and disease-specific nonprofits before paying retail. What insurance covers varies by plan and by whether it is prescribed as durable medical equipment. <em>[verify before publishing]</em></div>
+</section>
+
+<section id="team">
+<h2>Who's Who on the Care Team</h2>
+<p class="sub">Families lose weeks to calling the wrong person. Here is who does what.</p>
+<div class="grid">
+<div class="card"><h4>Hospital case manager / discharge planner</h4><p>Sets up what happens at discharge. Your best leverage point &mdash; but only while your loved one is still admitted.</p></div>
+<div class="card"><h4>Home health agency</h4><p>Skilled, intermittent, physician-ordered visits &mdash; nursing, PT, OT. Usually time-limited. Not a babysitter, not overnight coverage.</p></div>
+<div class="card"><h4>Private-duty caregiver / aide</h4><p>Hourly non-medical help: bathing, meals, transfers, companionship. Typically paid privately or via long-term care insurance.</p></div>
+<div class="card"><h4>Physical &amp; occupational therapy</h4><p>PT rebuilds movement. OT rebuilds daily function &mdash; dressing, bathing, kitchen tasks. Ask for OT specifically; families often don't.</p></div>
+<div class="card"><h4>Palliative care</h4><p>Comfort and symptom support alongside active treatment. Not the same as hospice, and not limited to end of life.</p></div>
+<div class="card"><h4>Hospice</h4><p>Comfort-focused care when treatment shifts to quality of life. Includes team support for the family, not only the patient.</p></div>
+<div class="card"><h4>Elder law attorney</h4><p>Powers of attorney, healthcare directives, asset and benefit planning. Engage earlier than feels necessary.</p></div>
+<div class="card"><h4>Care navigator (that's us)</h4><p>The operational layer around all of the above: assessment, home setup, equipment, vendor coordination, routines, family alignment.</p></div>
+</div>
+<div class="note"><strong>Where Gilt fits.</strong> We are not a nurse, an agency, or a placement service, and we do not give medical advice. We translate medical instructions into daily systems and make sure the pieces are actually connected. We work alongside your medical team, never in place of them.</div>
+</section>
+
+<section id="paying">
+<h2>How Care Gets Paid For</h2>
+<p class="sub">Orientation only &mdash; not financial or legal advice. Every plan and state differs; verify with the payer directly. <em>[legal review before publishing]</em></p>
+<table>
+<tr><th>Source</th><th>Generally helps with</th><th>Generally does not</th></tr>
+<tr><td>Medicare</td><td>Hospital and short-term skilled care, physician-ordered intermittent home health, some equipment</td><td>Long-term custodial care &mdash; the daily hands-on help most families actually need <em>[verify]</em></td></tr>
+<tr><td>Medicaid</td><td>Long-term care for those who meet state income/asset rules; some home- and community-based waiver programs</td><td>Households above eligibility thresholds; rules and waitlists vary by state <em>[verify]</em></td></tr>
+<tr><td>Long-term care insurance</td><td>In-home aides and facility care, per policy terms</td><td>Anything outside the policy's elimination period, daily limits, and trigger conditions</td></tr>
+<tr><td>Veterans benefits</td><td>Certain aid programs for qualifying veterans and surviving spouses</td><td>Non-qualifying service or income situations; applications take time <em>[verify]</em></td></tr>
+<tr><td>Private pay</td><td>Everything, immediately, with no approval process</td><td>Sustaining itself &mdash; this is where planning matters most</td></tr>
+</table>
+<h4>Questions worth asking early</h4>
+<ul>
+<li>Is there a long-term care policy anyone has forgotten about? Check old files and premium withdrawals.</li>
+<li>Did they ever serve in the military? Ask &mdash; adult children often don't know the details.</li>
+<li>What is the monthly number the household can actually sustain for a year?</li>
+<li>Who has legal authority to sign and to move money if this person can't?</li>
+</ul>
+</section>
+
+<section id="documents">
+<h2>The Document Binder</h2>
+<p class="sub">One binder or one shared folder. Every family member knows where it is.</p>
+<div class="grid">
+<div class="card"><h4>Medical</h4><p>Diagnosis list, current medications with doses, allergies, physicians and phone numbers, insurance cards, recent discharge summaries.</p></div>
+<div class="card"><h4>Legal</h4><p>Healthcare power of attorney, financial power of attorney, advance directive / living will, HIPAA authorization, will or trust location.</p></div>
+<div class="card"><h4>Financial</h4><p>Bank and benefit accounts, recurring bills, insurance policies (including any long-term care policy), tax preparer contact.</p></div>
+<div class="card"><h4>Household</h4><p>Vendor list, equipment rentals and return dates, caregiver schedule, home access details, pet and plant instructions.</p></div>
+</div>
+<div class="note"><strong>The 2 AM test.</strong> If a stranger had to take over tonight, could they find the medication list, the doctor's number, and who has authority to decide? If not, that is this week's project.</div>
+</section>
+
+<section id="family">
+<h2>Running the Family Meeting</h2>
+<p class="sub">Most caregiving conflict is not about love. It's about undefined roles.</p>
+<h3>An agenda that works</h3>
+<ol>
+<li><strong>Facts first.</strong> One person reads the current medical picture out loud. No debate during this part.</li>
+<li><strong>What the week actually requires.</strong> List the tasks and the hours. Write the real number.</li>
+<li><strong>Who covers what.</strong> Named person, named day, named task. "Helping when I can" is not a role.</li>
+<li><strong>Money.</strong> What it costs, who is paying, how decisions get made when it changes.</li>
+<li><strong>The out-of-town rule.</strong> Distance is not exemption. Money, scheduling, research, and vendor calls travel fine.</li>
+<li><strong>Next check-in.</strong> Put it on the calendar before anyone leaves.</li>
+</ol>
+<h4>Ground rules to read aloud</h4>
+<ul>
+<li>The primary caregiver reports what is happening; they do not defend it.</li>
+<li>No decisions about someone who is able to decide for themselves.</li>
+<li>Disagree with the plan, bring an alternative with hours and dollars attached.</li>
+<li>One point person owns communication with the medical team. One.</li>
+</ul>
+<div class="quote">The weight was distributed unevenly across everyone who loved her. That's the part nobody prepares you for.</div>
+</section>
+
+<section id="caregiver">
+<h2>Caregiver Sustainability</h2>
+<p class="sub">The plan fails when the person holding it up does. Roughly 53 million Americans provide unpaid care to an adult family member each year &mdash; most with no professional support.</p>
+<h4>Signs you are past capacity</h4>
+<ul>
+<li>Sleep is broken most nights, and you've stopped noticing.</li>
+<li>Your own appointments have been cancelled twice or more.</li>
+<li>Resentment shows up toward the person you're caring for &mdash; then guilt about the resentment.</li>
+<li>You can't name the last time you were off duty for four uninterrupted hours.</li>
+<li>Work performance has slipped and you're covering for it.</li>
+</ul>
+<h4>What actually helps</h4>
+<ul>
+<li><strong>Scheduled relief, not offered relief.</strong> A recurring block on the calendar beats "call me if you need anything."</li>
+<li><strong>Give tasks, not feelings.</strong> When someone asks how to help, hand them a specific errand, shift, or phone call.</li>
+<li><strong>Respite options.</strong> Adult day programs, short-term respite stays, and paid coverage for a fixed window.</li>
+<li><strong>Your own clinician.</strong> Around 40% of family caregivers report symptoms of clinical depression. This is a load problem, not a character problem.</li>
+<li><strong>Offload the logistics.</strong> Coordination is the part that can genuinely be handed to someone else. It's the part we take.</li>
+</ul>
+</section>
+
+<section id="redflags">
+<h2>When to Escalate</h2>
+<p class="sub">General guidance, not medical advice. When in doubt, call the clinical team &mdash; or 911 for anything sudden or severe.</p>
+<table>
+<tr><th>What you notice</th><th>Why it matters</th></tr>
+<tr><td>A fall &mdash; even without obvious injury</td><td>Falls repeat. One fall predicts the next; the plan needs to change either way.</td></tr>
+<tr><td>New confusion, agitation, or sudden personality change</td><td>Often a sign of an underlying medical issue, not "just aging."</td></tr>
+<tr><td>Skin redness that doesn't fade over a bony area</td><td>Early pressure injury. Far easier to prevent than to heal.</td></tr>
+<tr><td>Not eating or drinking, or a sudden weight change</td><td>Escalates quickly in older adults.</td></tr>
+<tr><td>Medications skipped, doubled, or confusing</td><td>The most common preventable cause of a return trip to the hospital.</td></tr>
+<tr><td>Withdrawal, hopelessness, or talk of not wanting to go on</td><td>Take seriously; contact their clinician. In the US, 988 reaches the Suicide &amp; Crisis Lifeline.</td></tr>
+</table>
+<p>Roughly one in five hospital patients is readmitted within 30 days &mdash; frequently because the transition home was never properly managed.</p>
+</section>
+<section id="faq">
+<h2>Frequently Asked Questions</h2>
+<p class="sub">The questions families ask us most &mdash; about the work, the cost, and their own situations.</p>
+
+<div class="faqgroup"><h3>What Gilt Is</h3>
+<details><summary>What does a care navigator actually do?</summary><div class="a"><p>We handle the operational layer around clinical care. That means assessing the home and the situation, fixing safety and workflow problems, sourcing and setting up equipment, translating medical instructions into a real daily routine, coordinating vendors, aligning the family on one plan, and staying available as things change.</p></div></details>
+<details><summary>Is this the same as a home health aide or a nurse?</summary><div class="a"><p>No. We are not clinical providers. Nurses and aides deliver hands-on care; we build and manage the system around that care &mdash; the planning, logistics, home setup, and coordination that medical staff don't have time for and families don't know how to do.</p></div></details>
+<details><summary>Do you give medical advice?</summary><div class="a"><p>Never. We translate medical instructions into practical daily systems and work alongside your medical team, never in place of them. Clinical decisions stay with your clinicians.</p></div></details>
+<details><summary>Do you place people in facilities?</summary><div class="a"><p>No. Our work is centered on making home work. If a facility becomes the right path for your family, we help you think it through and stay organized &mdash; but we are not a placement agency and take no referral fees. <em>[confirm this reflects your policy]</em></p></div></details>
+<details><summary>Why does Gilt Consulting exist?</summary><div class="a"><p>Because our founder's family needed this and it didn't exist. When her grandmother's health declined, the family brought her home and improvised &mdash; renting equipment they couldn't set up, rearranging furniture at midnight, absorbing a coordination weight nobody prepared them for. Gilt exists so that person exists for you.</p></div></details>
+<details><summary>What is The OASIS Method?</summary><div class="a"><p>Our structured approach: <strong>O</strong>perational Assessment, <strong>A</strong>ctionable Stabilization, <strong>S</strong>eamless Integration, <strong>I</strong>nformed Support, and <strong>S</strong>ustained Navigation. It's a system built around your family's actual situation, not a checklist.</p></div></details>
+</div>
+
+<div class="faqgroup"><h3>Getting Started</h3>
+<details><summary>Do I have to pay anything before the first call?</summary><div class="a"><p>No. The 30-minute investigation call is completely free. Nothing is charged until after that conversation, and only if you choose to move forward. No pressure, no obligation.</p></div></details>
+<details><summary>What happens on that first call?</summary><div class="a"><p>We listen. You describe what your family is navigating, we ask questions, we answer yours honestly, and together we figure out what kind of support would actually help &mdash; including telling you if that's nothing we sell.</p></div></details>
+<details><summary>Can you help if the situation is urgent?</summary><div class="a"><p>Yes. Email support@giltcp.com directly and we respond the same day. In urgent situations the free call can usually be scheduled within 24 to 48 hours.</p></div></details>
+<details><summary>Is it too early to call? Nothing has happened yet.</summary><div class="a"><p>Earlier is better and cheaper. The families with the hardest transitions are almost always the ones who started planning after the crisis instead of before it.</p></div></details>
+<details><summary>Is it too late? We've been doing this for two years already.</summary><div class="a"><p>No. Long-running situations usually have accumulated workarounds that quietly cost the family time, money, and sleep. A fresh assessment often finds several fixable ones.</p></div></details>
+<details><summary>What if my parent doesn't want help?</summary><div class="a"><p>Common, and worth taking seriously. We frame the work around preserving their independence and choices &mdash; which is usually what they're actually defending. We never make decisions about someone who is capable of making their own.</p></div></details>
+</div>
+
+<div class="faqgroup"><h3>Services, Cost &amp; Logistics</h3>
+<details><summary>What's the difference between a virtual and in-person evaluation?</summary><div class="a"><p>The virtual Stabilization Evaluation covers everything the in-person visit does, conducted over secure video with a camera walkthrough of the home. The in-person visit allows hands-on assessment and on-site fixes. Most families start virtual and upgrade if needed.</p></div></details>
+<details><summary>How much does it cost?</summary><div class="a"><p>The Stabilization Evaluation is $250 virtual or $500 in person plus travel, and is credited in full toward any package. The two-week Optimization Plan is $1,200. Monthly Care Navigation is $300 per month. Premium Concierge Navigation is $3,500 per month with in-home visits included. Every path begins with the free call.</p></div></details>
+<details><summary>Which service is right for us?</summary><div class="a"><p>Most families start with the Stabilization Evaluation. Choose the Optimization Plan if you need the environment redesigned and vendors coordinated, Monthly Navigation for a steady hand over the long haul, and Premium Concierge for complex situations where you want the full weight lifted.</p></div></details>
+<details><summary>Are payment plans available?</summary><div class="a"><p>Yes for the Optimization Plan. Ask on the free call and we'll be straightforward about what's possible.</p></div></details>
+<details><summary>Do you take insurance?</summary><div class="a"><p>Our services are private pay. Some families use flexible funds or long-term care policy benefits &mdash; verify with your plan directly. <em>[verify before publishing]</em></p></div></details>
+<details><summary>Where do you work? Do you travel?</summary><div class="a"><p>Virtual engagements are available anywhere. In-person visits are available anywhere in the continental US; travel is included in Premium Concierge and added to other engagements.</p></div></details>
+<details><summary>Can you help from out of state while I live far away?</summary><div class="a"><p>That's one of the situations we're built for. Adult children managing a parent's care from a distance are a core part of who we serve &mdash; we become the consistent, coordinating presence you can't always be.</p></div></details>
+<details><summary>What happens after an engagement ends?</summary><div class="a"><p>You keep everything we built: the care plan, the vendor contacts, the documented routines. Many families move into Monthly Navigation once the acute phase passes. No pressure to continue, no penalty for stopping.</p></div></details>
+<details><summary>Can I cancel the monthly service?</summary><div class="a"><p>Yes, anytime.</p></div></details>
+<details><summary>Is what we tell you private?</summary><div class="a"><p>Yes. Family and health information you share stays confidential and is used only to do the work. <em>[legal to confirm exact privacy language]</em></p></div></details>
+</div>
+
+<div class="faqgroup"><h3>Our Situation Specifically</h3>
+<details><summary>My parent is being discharged in two days and I'm not ready.</summary><div class="a"><p>The most common call we get. Email support@giltcp.com and start with Section 2 of this guide tonight &mdash; safety path, sleeping location, overnight coverage.</p></div></details>
+<details><summary>We're moving into hospice. Is that something you support?</summary><div class="a"><p>Yes. When the focus shifts to comfort and dignity, we manage the operational layer so your family can focus on being present.</p></div></details>
+<details><summary>My child is sick and everything else is falling apart.</summary><div class="a"><p>Also our work. Parents navigating a child's illness need the logistics taken off their plate so they can stay focused on their child.</p></div></details>
+<details><summary>My siblings and I can't agree on anything.</summary><div class="a"><p>Family alignment is a formal part of every engagement. An outside party running a structured conversation changes the dynamic more than families expect.</p></div></details>
+<details><summary>I think I'm burning out.</summary><div class="a"><p>Then that's the thing to address, not the last thing on the list. When the person holding it all together reaches their limit, the whole plan is at risk. We step in to redistribute the weight.</p></div></details>
+</div>
+
+<div class="disc"><strong>Please note.</strong> This guide is general educational information about organizing care at home. It is not medical, legal, financial, or insurance advice, and it does not create a client relationship. Coverage rules and benefit programs vary by plan, state, and situation &mdash; verify anything financial with the payer or a qualified professional. For medical questions, contact your clinical team. In an emergency, call 911.</div>
+
+<div class="cta">
+<h2>The first conversation is free.</h2>
+<p>Tell us what your family is navigating. We'll tell you honestly what kind of support would help and what the path forward looks like. No commitment, no cost, no pitch.</p>
+<a class="btn" href="https://calendly.com/daily-giltcp/30min" target="_blank" rel="noopener">Schedule Your Free 30-Minute Call</a>
+</div>
+<footer>Gilt Consulting &middot; The OASIS Method&trade; &middot; support@giltcp.com<br>Draft resource guide prepared by Viktor for Daily &mdash; August 24, 2026.</footer>
+</section>
+</main></div>
+<script>
+const ls=[...document.querySelectorAll('nav a')],ss=[...document.querySelectorAll('section')];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){ls.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));}});},{rootMargin:'-10% 0px -80% 0px'});
+ss.forEach(s=>io.observe(s));
+</script></body></html>
